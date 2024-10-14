@@ -3,16 +3,17 @@
 ## Propose code
 
 ### Configurable
-```javascript
+```html
+<script>
 var config = { 
 	path: "https://thefinancialsecrets.pannalabs.ai", 
 	testmode: true 
 }
 (function (u, q, w, h, r, b, z) {
 	
-	if(q && !(new URLSearchParams(window.location.search)).has('ai_test')) return
+	if(q && !(new URLSearchParams(window.location.search)).has('testmode')) return
 	
-	var i = "pannalabs-ai-assistant",
+	var i = "ai-assist",
 		t = "AI assistant",
 		j = 'px',
 		F = Object.assign(document.createElement("iframe"), { src: u, title: t, name: i, id: i });
@@ -41,10 +42,11 @@ var config = {
 		sizeWidth: true
 	}, '#' + i)
 	
-})(config.path,config.testmode, 140, 100, 15, 40, 100)
+})(config.path, config.testmode, 140, 100, 15, 40, 100)
+</script>
 ```
 
-### Minified (Portable)
+### Portable (Minified)
 ```html
 <script>
 var config = { 
