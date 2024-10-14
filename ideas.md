@@ -1,4 +1,4 @@
-## Make the embed code portable
+## First attempt to make embed code portable and configurable
 ```javascript
 (function (u, q, w, h, r, b, z) {
 	
