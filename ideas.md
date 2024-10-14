@@ -1,4 +1,4 @@
-# First attempt to make embed code portable and configurable
+# Improve portability and make it configurable
 
 ## This is the current code
 ```html
@@ -34,7 +34,7 @@
 />
 ```
 
-## This is suggested code
+## This is the suggested code
 
 When I was installing it into thefinancialsecrets website I needed to adjust the zIndex and the right positioning.
 I took all the configuration out and minified the executing script.
