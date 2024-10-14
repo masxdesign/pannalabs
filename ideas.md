@@ -1,6 +1,8 @@
 # First attempt to make embed code portable and configurable
 
 ## Propose code
+
+### Configurable
 ```javascript
 var config = { 
 	path: "https://thefinancialsecrets.pannalabs.ai", 
@@ -42,7 +44,7 @@ var config = {
 })(config.path,config.testmode, 140, 100, 15, 40, 100)
 ```
 
-### Minified
+### Minified (Portable)
 ```html
 <script>
 var config = { 
