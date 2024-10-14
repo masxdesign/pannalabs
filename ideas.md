@@ -1,6 +1,6 @@
-## First attempt to make embed code portable and configurable
+# First attempt to make embed code portable and configurable
 
-### Propose code
+## Propose code
 ```javascript
 (function (u, q, w, h, r, b, z) {
 	
@@ -46,7 +46,7 @@ var i="pannalabs-ai-assistant",t="AI assistant",j='px',F=Object.assign(document.
 </script>
 ```
 
-### Current code
+## Current code
 ```html
 <script>
 (function () {
