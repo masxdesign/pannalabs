@@ -2,6 +2,10 @@
 
 ## Propose code
 ```javascript
+var config = { 
+	path: "https://thefinancialsecrets.pannalabs.ai", 
+	testmode: true 
+};
 (function (u, q, w, h, r, b, z) {
 	
 	if(q && !(new URLSearchParams(window.location.search)).has('ai_test')) return
@@ -35,8 +39,18 @@
 		sizeWidth: true
 	}, '#' + i)
 	
-})("https://thefinancialsecrets.pannalabs.ai", true, 140, 100, 15, 40, 100)
+})(config.path,config.testmode, 140, 100, 15, 40, 100)
 ```
+<script>
+var config = { 
+	path: "https://thefinancialsecrets.pannalabs.ai", 
+	testmode: true 
+};
+(function(u,q,w,h,r,b,z){if(q&&!(new URLSearchParams(window.location.search)).has('testmode')) return;
+var i="ai-assist",t="AI assistant",j='px',F=Object.assign(document.createElement("iframe"),{src:u,title:t,name:i,id:i});F.style.cssText="overflow:hidden;position:fixed;display:inline;border:0";Object.assign(F.style,{minHeight:h+j,minWidth:w+j,right:r+j,bottom:b+j,zIndex:z});document.body.appendChild(F);iFrameResize({heightCalculationMethod:'bodyOffset',log:!1,checkOrigin:[u],minHeight:h,minWidth:w,position:'fixed',bottom:0,right:0,autoResize:!1,sizeWidth:!0},'#'+i)})(config.path,config.testmode,140,100,15,40,100)
+</script>
+
+
 
 ### Minified
 ```html
