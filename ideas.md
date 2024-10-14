@@ -1,14 +1,18 @@
 # First attempt to make embed code portable and configurable
 
-## Propose code
+
+
+## Proposed code
 
 ### Configurable
 ```html
 <script>
 var config = { 
 	path: "https://thefinancialsecrets.pannalabs.ai", 
-	testmode: true 
-}
+	testmode: true,
+	bottom: 40,
+	zIndex: 100
+};
 (function (u, q, w, h, r, b, z) {
 	
 	if(q && !(new URLSearchParams(window.location.search)).has('testmode')) return
@@ -42,7 +46,7 @@ var config = {
 		sizeWidth: true
 	}, '#' + i)
 	
-})(config.path, config.testmode, 140, 100, 15, 40, 100)
+})(config.path, config.testmode, 140, 100, 15, config.bottom, config.zIndex)
 </script>
 ```
 
@@ -51,10 +55,12 @@ var config = {
 <script>
 var config = { 
 	path: "https://thefinancialsecrets.pannalabs.ai", 
-	testmode: true 
-}
+	testmode: true,
+	bottom: 40,
+	zIndex: 100
+};
 (function(u,q,w,h,r,b,z){if(q&&!(new URLSearchParams(window.location.search)).has('ai_test')) return;
-var i="pannalabs-ai-assistant",t="AI assistant",j='px',F=Object.assign(document.createElement("iframe"),{src:u,title:t,name:i,id:i});F.style.cssText="overflow:hidden;position:fixed;display:inline;border:0";Object.assign(F.style,{minHeight:h+j,minWidth:w+j,right:r+j,bottom:b+j,zIndex:z});document.body.appendChild(F);iFrameResize({heightCalculationMethod:'bodyOffset',log:!1,checkOrigin:[u],minHeight:h,minWidth:w,position:'fixed',bottom:0,right:0,autoResize:!1,sizeWidth:!0},'#'+i)})(config.path,config.testmode,140,100,15,40,100)
+var i="pannalabs-ai-assistant",t="AI assistant",j='px',F=Object.assign(document.createElement("iframe"),{src:u,title:t,name:i,id:i});F.style.cssText="overflow:hidden;position:fixed;display:inline;border:0";Object.assign(F.style,{minHeight:h+j,minWidth:w+j,right:r+j,bottom:b+j,zIndex:z});document.body.appendChild(F);iFrameResize({heightCalculationMethod:'bodyOffset',log:!1,checkOrigin:[u],minHeight:h,minWidth:w,position:'fixed',bottom:0,right:0,autoResize:!1,sizeWidth:!0},'#'+i)})(config.path, config.testmode, 140, 100, 15, config.bottom, config.zIndex)
 </script>
 ```
 
