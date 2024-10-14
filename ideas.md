@@ -1,10 +1,45 @@
 # First attempt to make embed code portable and configurable
 
+## This is the current code
+```html
+<script>
+(function () {
+	if (typeof window !== 'undefined') {
+		setTimeout(() => {
+			iFrameResize(
+				{
+				heightCalculationMethod: 'bodyOffset',
+				log: false,
+				checkOrigin: ['https://prach-bot-react.vercel.app'],
+				minHeight: '100',
+				minWidth: '140',
+				position: 'fixed',
+				bottom: '0',
+				right: '0',
+				autoResize: false,
+				sizeWidth: true,
+				},
+				'#PannaLabs-chat'
+			)
+		}, 2000);
+	}
+})()
+</script>
+<iframe
+  src="https://prach-bot-react.vercel.app"
+  title="chatbot"
+  id="prach-chat"
+  name="prach-chat"
+  style="overflow: hidden; min-height: 105px; min-width: 140px; position: fixed; bottom: 0px;right: 15px;display: inline;border: 0;"
+/>
+```
 
+## This is suggested code
 
-## Proposed code
+When I was installing it into thefinancialsecrets website I needed to adjust the zIndex and the right positioning.
+I took all the configuration out and minified the executing script.
 
-### Configurable
+### Configurable (before minified)
 ```html
 <script>
 var config = { 
@@ -64,36 +99,3 @@ var i="pannalabs-ai-assistant",t="AI assistant",j='px',F=Object.assign(document.
 </script>
 ```
 
-## Current code
-```html
-<script>
-(function () {
-	if (typeof window !== 'undefined') {
-		setTimeout(() => {
-			iFrameResize(
-				{
-				heightCalculationMethod: 'bodyOffset',
-				log: false,
-				checkOrigin: ['https://prach-bot-react.vercel.app'],
-				minHeight: '100',
-				minWidth: '140',
-				position: 'fixed',
-				bottom: '0',
-				right: '0',
-				autoResize: false,
-				sizeWidth: true,
-				},
-				'#PannaLabs-chat'
-			)
-		}, 2000);
-	}
-})()
-</script>
-<iframe
-  src="https://prach-bot-react.vercel.app"
-  title="chatbot"
-  id="prach-chat"
-  name="prach-chat"
-  style="overflow: hidden; min-height: 105px; min-width: 140px; position: fixed; bottom: 0px;right: 15px;display: inline;border: 0;"
-/>
-```
