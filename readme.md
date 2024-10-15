@@ -15,6 +15,8 @@
 ```
 
 ## Attributes
+### src
+@todo: copy the script and point to the new location
 ### data-source
 use in the iframe src - https://[data-source].pannalabs.ai (see code)
 
