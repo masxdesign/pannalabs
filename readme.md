@@ -18,8 +18,7 @@
 ### src
 @todo: copy the web2bot.min.js script and point to the new location
 ### data-source
-use in the iframe src - https://[data-source].pannalabs.ai 
-https://github.com/masxdesign/pannalabs/blob/dab92adda19cff94da3c3b36c6f29e035fca1af8/web2bot.js#L36
+use in the iframe src - https://[data-source].pannalabs.ai (see code)
 
 ### data-testmode
 enables testmode, web2bot only loads when '?testmode' is added to the web address
