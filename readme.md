@@ -1,6 +1,7 @@
 # Web2bot integration
 
-## Add in the head tag
+Add in the head tag
+
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.min.js"></script>
 <script 
