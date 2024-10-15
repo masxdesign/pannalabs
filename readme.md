@@ -1,6 +1,6 @@
 # Web2bot integration
 
-## Insert inside the head tag
+## Add in the head tag
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.min.js"></script>
 <script 
@@ -15,7 +15,7 @@
 
 ## Attributes
 ### data-source
-use for the iframe src - https://[source].pannalabs.ai (see code)
+use in the iframe src - https://[data-source].pannalabs.ai (see code)
 
 ### data-testmode
 enables testmode, web2bot only loads when '?testmode' is added to the web address
